@@ -16,7 +16,7 @@ privfile = open('rsa_private_key.pem','r')
 with open('rsa_private_key.pem','r') as f:   # 读取本地的私钥
     privkey = rsa.PrivateKey.load_pkcs1(f.read().encode())
 
-zk = KazooClient(hosts='172.18.19.52:2181')  # 172.18.19.52:2181zookeeper地址端口
+zk = KazooClient(hosts='172.18.xx.xx:xxx')  # 172.18.xx.xx:xxzookeeper地址端口
 zk.start()
 if zk.exists("/lambda/global"):  # /lambda/global配置文件目录
     print ("OK")
