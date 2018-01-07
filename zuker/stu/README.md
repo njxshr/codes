@@ -20,13 +20,13 @@ To activate this environment, use:
 
 To deactivate an active environment, use:
 
-source deactivate
+> source deactivate
 
 如何安包
 安装 virtualenv
-|conda install virtualenv
+> conda install virtualenv
 查看 已经安装的包列表
-|conda list
+> conda list
 查看 指定环境下的py包
-|conda list -n py名字
+> conda list -n py名字
 例如 conda list -n python35_scrapy
