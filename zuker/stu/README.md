@@ -41,4 +41,8 @@ To deactivate an active environment, use:
 > mkvirtualenv --python=/Users/lee/anaconda3/envs/python35_scrapy/bin/python3.5 article_spider
 
 查看虚拟环境和使用
->
+> 创建爬虫
+ cd  /Users/lee/PycharmProjects/chanjet_git/lee_codes/zuker/stu/article/
+ scrapy startproject ArticleSpider
+ cd ArticleSpider/
+ scrapy genspider jobbole blog.jobbole.com
