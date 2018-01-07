@@ -30,5 +30,15 @@ To deactivate an active environment, use:
 > conda list
 
 查看 指定环境下的py包
->   conda list -n py名字
+> conda list -n py名字
 例如 conda list -n python35_scrapy
+
+安装virtualenv virtualenvwrapper
+> conda install virtualenv virtualenvwrapper
+
+安装python3.5的虚拟环境的虚拟环境 命名为 article_spider
+
+> mkvirtualenv --python=/Users/lee/anaconda3/envs/python35_scrapy/bin/python3.5 article_spider
+
+查看虚拟环境和使用
+>
