@@ -25,8 +25,10 @@ To deactivate an active environment, use:
 如何安包
 安装 virtualenv
 > conda install virtualenv
+
 查看 已经安装的包列表
 > conda list
+
 查看 指定环境下的py包
-> conda list -n py名字
+>   conda list -n py名字
 例如 conda list -n python35_scrapy
