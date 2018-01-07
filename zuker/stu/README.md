@@ -13,18 +13,17 @@ python版本工具 Anaconda
 Anaconda下的python3.5.4的名称 python35_scrapy
 存放位置在 /Users/lee/anaconda3/envs/python35_scrapy/bin/python3.5
 如何使用
-/#
-/# To activate this environment, use:
-\# > source activate python35_scrapy
-\#
-\# To deactivate an active environment, use:
-\# > source deactivate
-\#
+
+To activate this environment, use:
+|source activate python35_scrapy
+To deactivate an active environment, use:
+|source deactivate
+
 如何安包
 安装 virtualenv
-conda install virtualenv
+|conda install virtualenv
 查看 已经安装的包列表
-conda list
+|conda list
 查看 指定环境下的py包
-conda list -n py名字
+|conda list -n py名字
 例如 conda list -n python35_scrapy
