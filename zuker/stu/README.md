@@ -15,9 +15,12 @@ Anaconda下的python3.5.4的名称 python35_scrapy
 如何使用
 
 To activate this environment, use:
-|source activate python35_scrapy
+
+> source activate python35_scrapy
+
 To deactivate an active environment, use:
-|source deactivate
+
+source deactivate
 
 如何安包
 安装 virtualenv
