@@ -24,3 +24,9 @@ xpath语法-其他
 //span|//ul 选取文档中的span和ul元素
 article/div/P|//span 选取所有属于article元素的div元素的p元素
 以及文档中所有的span元素
+
+xpath的方法
+如何取css样式中多个样式指定的内容
+contains
+response.xpath("//span[contains(@class,'vote-post-up)]")
+
