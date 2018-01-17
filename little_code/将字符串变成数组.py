@@ -7,11 +7,11 @@
 # 说明: code后有'#'是测试时加的或者需要修改的code
 # 用法：将字符串变成数组
 
-a = "lizhao2@chanjet.com,lizhao3@chanjet.com,lizhao4@chanjet.com"
+a = "li2@xx.com,li3@xx.com,li4@xx.com"
 print(a,type(a))
 
 print(type(a.split(',')))
 
-s = "lizhao2@chanjet.com,458462750@qq.com"
+s = "@xx.com,xx@xx.com"
 print(s.split(','))
 
