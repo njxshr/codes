@@ -10,7 +10,6 @@
 from scrapy.cmdline import execute
 
 import sys
-
 import os
 
 # 获得当前目录
