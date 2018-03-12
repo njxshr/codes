@@ -4,6 +4,8 @@ import re
 import datetime
 from scrapy.http import Request
 from urllib import parse
+from scrapy.loader import ItemLoader
+
 # from ArticleSpider.items import JobBoleArticleItem
 # 引入变量名费点事
 from zuker.stu.article.ArticleSpider.ArticleSpider.items import JobBoleArticleItem
@@ -78,6 +80,22 @@ class JobboleSpider(scrapy.Spider):
         article_item['tags'] = tags
         article_item['content'] = content
 
-        yield article_item
+        # 通过 item Loader 可以将css xpath 维护工作变的简单 item loader是个容器
+        item_loader = ItemLoader(item=JobBoleArticleItem(),response=response)
 
+        # item_loader.add_css("title","    ")
+        item_loader.add_xpath("title","//*[@class='entry-header']/h1/text()")
+        item_loader.add_value("url",response.url)
+        item_loader.add_value("url_object_id",get_md5(response.url))
+        item_loader.add_xpath("create_date","//*[@class='entry-meta']/p/text()")
+        item_loader.add_value("front_image_url",[front_image_url])
+        item_loader.add_xpath("praise_nums","//span[contains(@class,'vote-post-up')]/h10/text()")
+        item_loader.add_xpath("comment_nums","//a[@href='#article-comment']/span/text()")
+        item_loader.add_xpath("fav_nums","//span[contains(@class,'bookmark-btn')]/text()")
+        item_loader.add_xpath("tags","//*[@class='entry-meta']/p/a/text()")
+        item_loader.add_xpath("content","//div[@class='entry']")
+
+        article_item = item_loader.load_item() # 结果为list 还需要对数据做筛选，去掉冗余数据
+
+        yield article_item # 提交 article_item
 
