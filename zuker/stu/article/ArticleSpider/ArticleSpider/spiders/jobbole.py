@@ -8,7 +8,7 @@ from scrapy.loader import ItemLoader
 
 # from ArticleSpider.items import JobBoleArticleItem
 # 引入变量名费点事
-from zuker.stu.article.ArticleSpider.ArticleSpider.items import JobBoleArticleItem
+from zuker.stu.article.ArticleSpider.ArticleSpider.items import JobBoleArticleItem,ArticleItemLoader
 from zuker.stu.article.ArticleSpider.ArticleSpider.utils.common import get_md5
 
 class JobboleSpider(scrapy.Spider):
@@ -81,7 +81,7 @@ class JobboleSpider(scrapy.Spider):
         article_item['content'] = content
 
         # 通过 item Loader 可以将css xpath 维护工作变的简单 item loader是个容器
-        item_loader = ItemLoader(item=JobBoleArticleItem(),response=response)
+        item_loader = ArticleItemLoader(item=JobBoleArticleItem(),response=response)
 
         # item_loader.add_css("title","    ")
         item_loader.add_xpath("title","//*[@class='entry-header']/h1/text()")

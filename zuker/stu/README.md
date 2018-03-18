@@ -19,7 +19,7 @@ Anaconda下的python3.5.4的名称 python35_scrapy
 
 To activate this environment, use:
 
-> source activate python35_scrapy
+> source activate scrapy__py35
 
 To deactivate an active environment, use:
 
@@ -49,3 +49,6 @@ To deactivate an active environment, use:
  scrapy startproject ArticleSpider
  cd ArticleSpider/
  scrapy genspider jobbole blog.jobbole.com
+
+
+
