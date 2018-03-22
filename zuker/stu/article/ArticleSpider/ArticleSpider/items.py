@@ -7,7 +7,7 @@
 from scrapy.loader import ItemLoader
 import datetime
 import scrapy
-from scrapy.loader.processors import MapCompose,TakeFirst # 将我们的值 对他做两次处理
+from scrapy.loader.processors import MapCompose,TakeFirst,Join # 将我们的值 对他做两次处理
 
 class ArticlespiderItem(scrapy.Item):
     # define the fields for your item here like:
@@ -30,13 +30,24 @@ def date_convert(value):
 
 def get_nums(value):
     import re
-    match_re = re.match(".*?(\d+).*",fav_nums)
+    match_re = re.match(".*?(\d+).*",value)
     if match_re:
         nums = int(match_re.group(1))
     else:
         nums = 0
 
     return nums
+
+def remove_comment_tags(value):
+    # 去掉tag中提取得评论
+    if "评论" in value:
+        return ""
+    else:
+        return value
+
+def return_value(value):
+    return value
+
 
 class ArticleItemLoader(ItemLoader):
     # 自定义itemloader
@@ -52,16 +63,22 @@ class JobBoleArticleItem(scrapy.Item):
     )
     url = scrapy.Field()
     url_object_id = scrapy.Field()
-    front_image_url = scrapy.Field()
+    front_image_url = scrapy.Field(  # 这有个点，需要注意
+        output_processor=MapCompose(return_value)
+
+    )
     front_image_path = scrapy.Field()
     praise_nums = scrapy.Field(
-        input_processor = MapCompose(get_nums)
+        input_processor=MapCompose(get_nums)
     )
     comment_nums = scrapy.Field(
-        input_processor=MapCompose(get_nums)
+        input_processor=MapCompose(get_nums)  #
     )
     fav_nums = scrapy.Field(
         input_processor=MapCompose(get_nums)
     )
-    tags = scrapy.Field()
+    tags = scrapy.Field(
+        input_processor=MapCompose(remove_comment_tags),
+        output_processor=Join(",")
+    )
     content = scrapy.Field()

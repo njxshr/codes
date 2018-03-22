@@ -8,8 +8,8 @@ from scrapy.loader import ItemLoader
 
 # from ArticleSpider.items import JobBoleArticleItem
 # 引入变量名费点事
-from zuker.stu.article.ArticleSpider.ArticleSpider.items import JobBoleArticleItem,ArticleItemLoader
-from zuker.stu.article.ArticleSpider.ArticleSpider.utils.common import get_md5
+from ArticleSpider.items import JobBoleArticleItem,ArticleItemLoader
+from ArticleSpider.utils.common import get_md5
 
 class JobboleSpider(scrapy.Spider):
     name = "jobbole"
@@ -44,27 +44,31 @@ class JobboleSpider(scrapy.Spider):
         title = response.xpath('//*[@class="entry-header"]/h1/text()').extract_first() # 文章封面图
         create_data = response.xpath("//*[@class='entry-meta']/p/text()").extract()[0].split()[0]
         praise_nums = response.xpath("//span[contains(@class,'vote-post-up')]/h10/text()").extract()[0]
-        fav_nums = response.xpath("//span[contains(@class,'bookmark-btn')]/text()").extract_first().split()[0]
-        # match_re = re.match(".*?(\d+).*",fav_nums)
-
-        if fav_nums == '收藏':
-            fav_nums = 0
-
+        fav_nums = response.xpath("//span[contains(@class,'bookmark-btn')]/text()").extract_first().split()[0].split(' ')[0]
+        fav_re = re.match(".*?(\d+).*",fav_nums)
+        # if fav_re:
+        #     fav_nums = int(fav_re.group(1))
+        # else:
+        #     fav_nums = 0
 
         comment_nums = response.xpath("//a[@href='#article-comment']/span/text()").extract()[0]
         comment_re = re.match(".*?(\d+).*",comment_nums)
-
-        if comment_nums == '  评论':
-            comment_nums = 0
-            a = 111
+        # if comment_re:
+        #
+        #     comment_nums = int(comment_re.group(1))
+        # else:
+        #     comment_nums = 0
         content = response.xpath("//div[@class='entry']").extract()[0]
         type_tag = response.xpath("//*[@class='entry-meta']/p/a/text()").extract()[0].split()[0]
+        tag_list = response.css("p.entry-meta-hide-on-mobile a::text").extract()
+        tag_list = [element for element in tag_list if not element.strip().endswith("评论")]
+        tags = ",".join(tag_list)
         author_type = response.xpath("//div[@class='copyright-area']/text()").extract()[0] # 本文作者： ,原文出处： ;
-        if author_type == '本文作者： ':
-            author = response.xpath("//div[@class='copyright-area']/a/text()").extract()[1]
-        elif author_type == '原文出处： ':
-            author = response.xpath("//div[@class='copyright-area']/a/text()").extract()[0]
-        tags = type_tag + ',' + author
+        # if author_type == '本文作者： ':
+        #     author = response.xpath("//div[@class='copyright-area']/a/text()").extract()[1]
+        # elif author_type == '原文出处： ':
+        #     author = response.xpath("//div[@class='copyright-area']/a/text()").extract()[0]
+        # tags = type_tag + ',' + author
         article_item["url_object_id"] = get_md5(response.url)
         article_item['title'] = title
         article_item['url'] = response.url
