@@ -1,0 +1,32 @@
+xpath语法
+
+article 选artile元素的所有子节点
+/article 选取根元素 article
+article/a 选取所有属于article的子元素a元素
+//div 选取所有div子元素（不论出现在文档任何地方）
+article//div 选取所有属兔article元素的后代的div元素
+不管他是出现在article之下的任何位置
+//@class 选取所有名为class的属性
+
+xpath语法-谓语
+
+/article/div[1] 选取属于article子元素的第一个div元素
+/article/div[last()] 最后一个
+/article/div[last()-1] 倒数第二个
+//div[@lang] 选取所有拥有lang属性的div元素
+//div[@lang='eng'] 选取所有lang属性为eng的div元素
+
+xpath语法-其他
+/div/* 选取属于div元素的所有子节点
+//* 选取所有元素
+//div[@*] 选取所有带有属性的title元素
+/div/a|//div/p 选取所有div元素的a和p元素
+//span|//ul 选取文档中的span和ul元素
+article/div/P|//span 选取所有属于article元素的div元素的p元素
+以及文档中所有的span元素
+
+xpath的方法
+如何取css样式中多个样式指定的内容
+contains
+response.xpath("//span[contains(@class,'vote-post-up)]")
+
