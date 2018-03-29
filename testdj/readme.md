@@ -4,6 +4,7 @@
 - django:1.9.5
 - 查询版本
 ```
+
 # 1 mysql版本
 # 登录mysql后输入 :
 select version();
@@ -13,7 +14,7 @@ import django
 # 回车后报错说明没有安装django pip install django==1.95
 print(django.get_version())
 ```
-
+#### conda(anaconda)的安装和介绍 URL:https://zhuanlan.zhihu.com/p/22678445
 #### 环境安装1.0
 #### 在conda上安装python2.7
 > conda create --name python27_hades python=2.7
