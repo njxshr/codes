@@ -22,7 +22,7 @@ class ArticlespiderPipeline(object):
         return item
 
 class JsonWithEncodingPipeline(object):
-    # 自定义json温江的导出
+    # 自定义json文件的导出
     def __init__(self):
         self.file = codecs.open('article.json','w',encoding="utf-8")
     def process_item(self, item, spider):

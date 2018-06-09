@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/tucao_toubeijing1"
+        android:orientation="horizontal" 
+        >
+         <Button android:layout_width="35dp"
+       	 android:layout_height="40dp"
+       	 android:id="@+id/tiezi_fanhui"
+       	 android:background="@drawable/tucao_toubeijing_2"
+       	 android:onClick="tiezi_btn"/>
+    	<TextView
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dip"
+            android:text="吐槽贴"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" 
+            android:layout_marginLeft="10dp"/>
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dip"
+            android:text="点赞："
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" 
+            android:layout_marginLeft="60dp"
+            />
+	<Button 
+	    android:id="@+id/button_dianzan"
+	    android:onClick="tiezi_btn"
+	    android:layout_width="35dp"
+	    android:layout_height="35dp"
+	    android:layout_marginTop="3dp"
+	    android:layout_marginBottom="5dp"
+	    android:background="@drawable/button_dianzan"/>
+	<TextView android:background="@drawable/tucao_toubeijing1"
+	    android:id="@+id/cout"
+	    android:text="0"
+	    android:layout_marginLeft="15dp"
+	    android:layout_marginRight="10dp"
+	    android:layout_marginTop="2dp"
+	    android:layout_marginBottom="5dp"
+	    android:textSize="19dp"
+	    android:textColor="#FF0000"
+	    android:layout_width="30dp"
+	    android:layout_height="30dp"
+	    />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+        <EditText
+            android:id="@+id/tiezi_biaoti"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="4dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="8dip"
+            android:editable="false"
+            android:background="@drawable/fatie_kuang2"
+            android:padding="8dip"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/tiezi_zhengwen"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:gravity="top"
+            android:editable="false"
+            android:background="@drawable/fatie_kuang2"
+            android:maxLength="20000"
+            android:padding="8dip"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+    
+</LinearLayout>

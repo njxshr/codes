@@ -1,0 +1,303 @@
+<ScrollView android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mainRLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:background="#ffffff"
+        android:orientation="horizontal" >
+
+        <com.example.tourismfraudprevention.MyScrollLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/ScrollLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/top01" />
+
+            <RelativeLayout
+                android:id="@+id/Second"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/top02" />
+
+            <RelativeLayout
+                android:id="@+id/Third"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/top01" />
+
+            <RelativeLayout
+                android:id="@+id/Fourth"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/top02" />
+        </com.example.tourismfraudprevention.MyScrollLayout>
+
+        <LinearLayout
+            android:id="@+id/llayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24.0dip"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="5.0dip"
+                android:src="@drawable/page_indicator_bg" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="306dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0.83"
+        android:orientation="horizontal"
+        android:weightSum="4" >
+
+        <Button
+            android:id="@+id/jingdian"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/jingdian"
+            android:onClick="myBtn"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp"
+            android:text="查看景点"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/gonglue"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/gonglue"
+            android:onClick="myBtn"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp"
+            android:text="防骗攻略"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/tucao"
+            android:layout_width="wrap_content"
+            android:layout_height="75dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:drawableTop="@drawable/tucao"
+            android:onClick="myBtn"
+            android:paddingBottom="1dp"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp"
+            android:text="景点吐槽"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/tiaobeijing"
+        android:clickable="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="走在春末的季节    当季旅游推荐 >>"
+            android:textSize="12dp"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#C3FC9D"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="145dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="13dp"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/shouye_jinzhong_mianshan"
+                    android:layout_width="140dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/jingdian_jinzhong_mianshan"
+                    android:onClick="shouye_jingdian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFC0CB"
+                    android:text="优美绵山"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="145dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/shouye_yuncheng_pingyaogucheng"
+                    android:layout_width="140dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/jingdian_yuncheng_pingyaogucheng"
+                    android:onClick="shouye_jingdian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFC0CB"
+                    android:text="平遥古城古城经典"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="145dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="13dp"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/shouye_datong_yungangshiku"
+                    android:layout_width="140dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/jingdian_datong_yungangshiku"
+                    android:onClick="shouye_jingdian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFC0CB"
+                    android:text="四大石窟云冈石窟"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="145dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/shouye_xinzhou_wutaishan"
+                    android:layout_width="140dp"
+                    android:layout_height="125dp"
+                    android:background="@drawable/jingdian_xinzhou_wutaishan"
+                    android:onClick="shouye_jingdian" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="#FFC0CB"
+                    android:text="佛家圣地五台山"
+                    android:textColor="#000000"
+                    android:textSize="18dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/zhuyue_progressbar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="8dip"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>
+
+
+
+
+
+
+

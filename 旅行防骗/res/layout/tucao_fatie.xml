@@ -1,0 +1,84 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff" >
+   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/tucao_toubeijing1"
+        android:orientation="horizontal" 
+        >
+         <Button android:layout_width="35dp"
+       	 android:layout_height="40dp"
+       	 android:id="@+id/fanhui"
+       	 android:background="@drawable/tucao_toubeijing_2"
+       	 android:onClick="fatie_btn"/>
+    <TextView
+            android:layout_width="30dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dip"
+            android:text="写日志"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" 
+            android:layout_marginLeft="10dp"/>
+     <Button
+            android:id="@+id/fabiao"
+            android:onClick="fatie_btn"
+            android:background="@drawable/tucao_toubeijing1"
+            android:layout_width="18dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dip"
+            android:text="发表"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" 
+            android:layout_marginLeft="120dp"
+            />
+
+    </LinearLayout>
+	
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/fatie_miaoti"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginBottom="4dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_marginTop="8dip"
+            android:hint="标题"
+            android:background="@drawable/fatie_kuang2"
+            android:padding="8dip"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/fatie_zhengwen"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:gravity="top"
+            android:hint="正文"
+            android:background="@drawable/fatie_kuang2"
+            android:maxLength="20000"
+            android:padding="8dip"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+    
+</LinearLayout>

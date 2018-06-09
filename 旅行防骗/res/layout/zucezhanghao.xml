@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical" 
+	android:background="@drawable/beijing">
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="61dp"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
+        android:text="用户名："
+        android:textSize="24dp"
+        android:textColor="#000000"
+         />
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:hint="请输入字符型名字"
+        android:layout_marginTop="15dp"
+        android:ems="7"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:background="@drawable/kuang_shape"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="61dp"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:text="密    码："
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
+        android:textSize="24dp"
+        android:textColor="#000000"
+         />
+    <EditText 
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:hint="请输入密码"
+        android:layout_marginTop="15dp"
+        android:password="true"
+        android:ems="7"
+        android:textSize="20sp"
+        android:inputType="text"
+        android:background="@drawable/kuang_shape"/>
+	</LinearLayout>
+	<RadioGroup 
+	   android:id="@+id/gendergroup" 
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:orientation="horizontal"
+	   android:layout_marginTop="15dp"
+	   android:layout_marginLeft="22dp"
+	   >
+	    <RadioButton 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="男"
+	        android:checked="true"
+	        android:ems="6"
+	        android:id="@+id/male"/>
+	    <RadioButton 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="女"
+	         android:id="@+id/female"/>
+	</RadioGroup>
+
+	 <LinearLayout android:layout_width="wrap_content"
+    android:layout_height="39dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="22dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:text="电    话："
+        android:textSize="24dp"
+        android:textColor="#000000"
+         />
+    <EditText 
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:hint="请输入电话"
+        android:inputType="phone"
+        android:ems="7"
+        android:textSize="20sp"
+        android:background="@drawable/kuang_shape"/>
+	</LinearLayout>
+	<LinearLayout android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+	 <Button android:layout_width="wrap_content"
+	     android:layout_height="wrap_content"
+	     android:text="确定注册"
+	     android:textSize="26dp"
+	     android:paddingLeft="2dp"
+	     android:paddingRight="2dp"
+	     
+	     android:id="@+id/btn_zhuce"
+	     
+	     android:background="@drawable/button_kuang"
+	     android:layout_marginTop="40dp"
+	     android:layout_marginLeft="160dp"/>
+	 </LinearLayout>
+	 
+</LinearLayout>

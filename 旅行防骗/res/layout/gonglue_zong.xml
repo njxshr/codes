@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/tucao_toubeijing1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/gonglue_zong_fanhui"
+            android:layout_width="35dp"
+            android:layout_height="40dp"
+            android:background="@drawable/tucao_toubeijing_2"
+            android:onClick="gonglue_zong" />
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dip"
+            android:text="旅游攻略"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        </LinearLayout>
+       <ListView android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/gonglue_display"
+           android:entries="@array/gonglue"
+           android:dividerHeight="2dp"
+           android:divider="#f0f"
+           ></ListView>
+
+</LinearLayout>

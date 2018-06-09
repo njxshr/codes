@@ -8,8 +8,28 @@
 <title>lcv-search 搜索引擎</title>
 <link href="{% static '/css/style.css'%}" rel="stylesheet" type="text/css" />
 <link href="{% static '/css/index.css'%}" rel="stylesheet" type="text/css" />
+<style>
+html{height: 100%}
+        body{margin: 0;height: 100%;
+            background: #fff;}
+        canvas{display: block;width: 100%;height: 100%;}
+        .text{
+            width: 100%;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            line-height: 100%;
+            top: 0;
+            position: absolute;
+            top: 50%;
+            font-size: 50px;
+        }
+</style>
+
 </head>
 <body>
+
 <div id="container">
 	<div id="bd">
         <div id="main">
@@ -18,9 +38,9 @@
             </h1>
             <div class="nav ue-clear">
             	<ul class="searchList">
-                    <li class="searchItem current" data-type="article">文章</li>
-                    <li class="searchItem" data-type="question">问答</li>
-                    <li class="searchItem" data-type="job">职位</li>
+                    <li class="searchItem current" data-type="58house_info">58同城</li>
+                    <li class="searchItem" data-type="ppgy_info">品牌公寓</li>
+                    <li class="searchItem" data-type="lianjia_info">链家租房</li>
                 </ul>
             </div>
             <div class="inputArea">
@@ -36,17 +56,17 @@
             </div>
 
             <div class="historyArea">
-            	<p class="history">
-                	<label>热门搜索：</label>
-                    
-                </p>
+{#            	<p class="history">#}
+{#                	<label>热门搜索：</label>#}
+{##}
+{#                </p>#}
                 <p class="history mysearch">
                 	<label>我的搜索：</label>
                     <span class="all-search">
-                        <a href="javascript:;">专注界面设计网站</a>
-                        <a href="javascript:;">用户体验</a>
-                        <a href="javascript:;">互联网</a>
-                        <a href="javascript:;">资费套餐</a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
+                        <a href="javascript:;"></a>
                     </span>
 
                 </p>
@@ -56,16 +76,18 @@
 
     <div class="foot">
     	<div class="wrap">
-            <div class="copyright">Copyright &copy;uimaker.com 版权所有  E-mail:admin@uimaker.com</div>
+            <div class="copyright">Copyright &copy;zuker.club 版权所有  E-mail:lizhao086@yahoo.com</div>
         </div>
     </div>
 </div>
+<canvas id="canvas"></canvas>
 </body>
+<script src="{% static 'js/zhihu.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/jquery.js'%}"></script>
 <script type="text/javascript" src="{% static 'js/global.js'%}"></script>
 <script type="text/javascript">
-    var suggest_url = "/suggest/"
-    var search_url = "/search/"
+    var suggest_url = "{% url "suggest" %}"
+    var search_url = "{% url "search"%}"
 
 
 	$('.searchList').on('click', '.searchItem', function(){
